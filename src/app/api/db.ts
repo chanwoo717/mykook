@@ -8,7 +8,7 @@ export const test = async (type?: string, body?: initTy) => {
     await client.connect();
 
     let db, collection, data
-    db = client.db('Kookproject')
+    db = client.db('kook')
     collection = db.collection('recipeall')
 
     switch (type) {
