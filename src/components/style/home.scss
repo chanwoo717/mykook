@@ -1,0 +1,182 @@
+@import "../style/color.scss";
+@import "../style/mixin.scss";
+
+//pad
+body {
+    main {
+        .home_main_backcolor {
+            padding-top: 100px;
+            position: relative;
+
+            .scrollToTopButton {
+                cursor: pointer;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                width: 15px;
+                height: 15px;
+                position: fixed;
+                bottom: 120px;
+                right: calc(50%);
+
+                img {
+                    width: 50px;
+                }
+            }
+
+            .scrollToTopButton.visible {
+                opacity: 1;
+                z-index: 1;
+            }
+
+
+
+            .fame {
+                margin: 50px 0;
+
+                p {
+                    margin: 20px 0;
+                    font-size: 1.8rem;
+
+                }
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 10px;
+                }
+            }
+
+            .searchDiv {
+                display: flex;
+                align-items: center;
+                border: 2px solid #FFC700;
+                width: 100%;
+                height: 50px;
+                border-radius: 50px;
+                padding-left: 20px;
+
+                img {
+                    width: 30px;
+                    opacity: 0.5;
+                }
+
+                p {
+                    padding-left: 10px;
+                    font-size: 14px;
+                    opacity: 0.5;
+                }
+
+            }
+
+            .sub_category {
+                display: flex;
+                justify-content: space-between;
+                margin: 50px 0 0 0;
+
+                >p {
+                    font-size: 1.8rem;
+                }
+
+                select {
+                    border: 2px solid #FFC700;
+                    border-radius: 10px;
+                    height: 30px;
+                }
+            }
+
+            .home_btn {
+                padding-top: 70px;
+                display: flex;
+                justify-content: space-evenly;
+                button:hover{
+                    cursor: pointer;
+                }
+                button {
+                    background-color: $color-yellow;
+                    border: 1px solid #FFC700;
+                    width: 100px;
+                    height: 100px;
+                    display: inline-flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 20px;
+
+                    img {
+                        width: 50px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//mobile
+@include mobile {
+
+    body {
+        main {
+
+            .home_main_backcolor {
+                .home_btn::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .sub_category>p {
+                    font-size: 1.3rem;
+                }
+
+                .fame p {
+                    font-size: 1.3rem;
+                }
+
+                .home_btn {
+                    padding-top:40px;
+                    justify-content: space-between;
+                    gap: 1%;
+                    overflow: auto;
+
+
+                    button {
+                        width: 50%;
+                        height: 10vw;
+                        font-size: 10%;
+                        border-radius: 20%;
+
+
+                        img {
+                            width: 50%;
+                            height: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@include pad {
+    body {
+        main {
+            .home_main_backcolor {
+                .home_btn {
+
+
+                    button {
+                        height: 13vw;
+                        font-size: 12px;
+
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

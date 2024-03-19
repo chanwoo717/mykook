@@ -1,0 +1,294 @@
+@import "../style/mixin.scss";
+main{
+    .home_detail_header{
+        display:flex;
+        align-items: center;
+        background-color: #FFFEF9;
+        justify-content: space-between;
+        
+        height:100px;
+        
+        #arrow{
+            width:40px;
+            height:15px;
+        }
+        .func{
+            display:flex;
+            gap:20px;
+            img{
+                
+                width:40px;
+                height:40px;
+            }
+            
+        }
+        
+    }
+    .detail_contents{
+        padding-bottom: 100px;
+        background-color: #FFFEF9;
+        .youtube-ly{
+            width:100%;
+            margin:50px 0;
+            padding-top:calc((100% * 9) / 16);
+            position: relative;
+            .youtube_api{
+                position: absolute;
+                left:0; top:0;
+                width:100%;
+                height:100%;
+            }
+        }
+        .detail_ingredient{
+            background-color: white;
+            border:1px solid #d8dde6;
+            border-radius: 5px;
+            width:100%;
+            margin:0 auto;
+            height:auto;
+            display: flex;
+            align-items: center;
+            p{
+                padding:20px;
+                text-align: left;
+                line-height: 2.5;
+            }
+        }
+        .detail_comment{
+            .comment_box{
+                margin-bottom: 10px;
+                border:1px solid #d8dde6;
+                border-radius: 10px;
+                padding:20px;
+                >div{
+                    margin:20px 0;
+                    display:flex;
+                    >div{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: space-around;
+                    }
+                    p{
+                        
+                        img{
+                            width:50px;
+                            height:50px;
+                        }
+                    }
+
+                }
+                
+            }
+            
+        }
+        form{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            input{
+                border:1px solid #d8dde6;
+                border-radius: 10px;
+                height:30px;
+            }
+            input:nth-of-type(1){
+                width:80%;
+            }
+            input:nth-of-type(2){
+                width:15%;
+            }
+        }
+        .detail_menual{
+            background-color: white;
+            border:1px solid #d8dde6;
+            border-radius: 5px;
+            // width:100%;
+            // margin : 20px auto;
+            margin:20px 0 ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                padding:20px;
+                text-align: left;
+                img{
+                    width:200px;
+                    height:100%;
+                    border-radius: 5px;
+                }
+            }
+            p:nth-of-type(2){
+                padding:10px 10px;
+                height:150px;
+            }
+        }
+        h2{
+            margin:40px 0;
+            font-size: 36px;
+        }
+        .delete_pop2 {
+            width: 50%;
+            border: none;
+            background-color: #FCEEA7;
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display:none;
+            margin: 50px auto;
+            
+            button {
+                width: 20%;
+                height: 25px;
+                margin: 0 8px;
+                border: none;
+                border-radius: 5px;
+                background-color: yellow;
+                color: black;
+                font-weight: 600;
+    
+                &:hover {
+                    color: white;
+                }
+            }
+            &.active {
+                display:block;
+            }
+            
+        }
+        p{
+            text-align: center;
+            img{
+                width:100%;
+                height:460px
+            }
+        }
+    }
+}
+
+@include mobile {
+    main{
+        .home_detail_header{
+            height:60px;
+            a{
+                #arrow{
+                    width:30px;
+                }
+            }
+            .func{
+                img{
+                    width:30px;
+                    height:30px;
+                }
+            }
+        }
+        .detail_contents{
+            .delete_pop2{
+                &.active{
+                    width:100%;
+                }
+            }
+            h2{
+                font-size: 24px;
+            }
+            >p{
+                img{
+                    height:250px;
+                }
+            }
+            .detail_ingredient{
+                p{
+                    font-size: 14px;
+                }
+            }
+            .detail_menual{
+                display:block;
+                p{
+                    font-size: 14px;
+                }
+                p:nth-of-type(2){
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+            .detail_comment{
+                .comment_box{
+                    >div{
+                        p{
+                            img{
+                                width: 40px;
+                                height:40px;
+                            }
+                        }
+                        div{
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@include pad {
+    main{
+    .home_detail_header{
+        width:100%;
+    }
+    .detail_contents{
+        
+        h2{
+            font-size: 5vw;
+        }
+        >p{
+            width:100%;
+            img{
+                height:50vw;
+            }
+        }
+        .detail_ingredient{
+            width:100%;
+            >p{
+                font-size: 14px;
+            }
+        }
+        .detail_menual{
+            width:100%;
+            >p{
+                font-size: 14px;
+            }
+            >p:nth-of-type(2){
+                
+                img{
+                    width:25vw;
+                    height:100%;
+                }
+            }
+        }
+        .detail_comment{
+            width:100%;
+            >.comment_box{
+                >div{
+                p{
+                    img{
+                        width:7vw;
+                    }
+                }
+                div{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+            }
+            
+        }
+    }
+    
+}
+}

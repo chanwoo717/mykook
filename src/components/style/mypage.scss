@@ -1,0 +1,577 @@
+@import "../style/color.scss";
+@import "../style/mixin.scss";
+
+
+//프로필-pad
+.profile {
+    color: $color-black;
+    padding-top: 100px;
+
+    figure {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 133px;
+            height: 133px;
+            border: 1px solid $color-orange ;
+            border-radius: 100px;
+            background-color: $color-white;
+        }
+
+        figcaption {
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+
+            p {
+                margin: 5px 0;
+            }
+
+            p:nth-of-type(1) {
+                font-size: 1.8rem;
+            }
+
+            p:nth-of-type(2) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+
+//버튼-pad
+.my_btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 57px;
+
+    button {
+        background-color: $color-white;
+        border: 1px solid $color-yellow;
+        width: 132px;
+        height: 132px;
+        display: inline-flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        font-size: 1.1rem;
+    }
+
+}
+
+img {
+    width: 55px;
+    height: auto;
+}
+
+.noMyrecipe {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 150px;
+    color: $color-orange;
+}
+.myRecipeWid_box {
+    padding: 100px 0;
+    color: $color-black;
+    border-radius: 30px;
+    width: 100%;
+
+    .delete_pop {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        border: none;
+        background-color: #FCEEA7;
+        border-radius: 20px;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        opacity: 0;
+        
+        button {
+            width: 20%;
+            height: 25px;
+            margin: 0 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: yellow;
+            color: black;
+            font-weight: 600;
+    
+            &:hover {
+                color: white;
+            }
+        }
+        &.active {
+            opacity: 1;
+        }
+        
+    }
+
+    .myRecipeWid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .myRecipeWid {
+        width: 100%;
+        margin: 0 auto;
+
+        figure {
+            display: flex;
+            margin: 30px 0;
+            align-items: center;
+            gap: 40px;
+
+
+            .scrap_position {
+                position: relative;
+
+                .menu_img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 20px;
+
+                }
+            }
+
+            figcaption {
+
+                .flex {
+                    h2 {
+                        margin: 0;
+                        font-size: 24px;
+                    }
+
+
+                }
+
+                .recipeWidBtn {
+                    display: flex;
+
+                    div {
+                        
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 50px;
+                        width: 70px;
+                        text-align: center;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    margin: 20px 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    word-break: break-word;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical
+                }
+            }
+        }
+
+    }
+}
+
+.noComment {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 150px;
+    color: $color-orange;
+}
+.recipeCommentWid_box {
+    position: relative;
+    padding: 100px 0;
+    color: $color-black;
+    border-radius: 30px;
+    width: 100%;
+
+    .recipeCommentWid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .recipeCommentWid {
+        width: 100%;
+        margin: 0 auto;
+
+        figure {
+            display: flex;
+            margin: 30px 0;
+            align-items: center;
+            gap: 40px;
+
+
+            .scrap_position {
+                position: relative;
+
+                .menu_img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 20px;
+
+                }
+            }
+
+            figcaption {
+                .recipeWidBtn {
+                    display: flex;
+
+                    div {
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 50px;
+                        width: 70px;
+                        text-align: center;
+                    }
+                }
+
+                .flex {
+                    h2 {
+                        margin: 0;
+                        font-size: 24px;
+                    }
+
+
+                }
+
+                p {
+                    font-size: 16px;
+                    margin: 20px 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    word-break: break-word;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical
+                }
+            }
+        }
+
+    }
+}
+.noLike {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 150px;
+    color: $color-orange;
+}
+.likeRecipeWid_box {
+    
+    >h1 {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    padding-top: 150px;
+    color: $color-black;
+    border-radius: 30px;
+    width: 100%;
+    padding-bottom: 100px;
+
+    .likeRecipeWid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .likeRecipeWid {
+        width: 100%;
+        margin: 0 auto;
+
+        figure {
+            display: flex;
+            margin: 30px 0;
+            align-items: center;
+            gap: 40px;
+
+
+            .scrap_position {
+                position: relative;
+
+                .menu_img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 20px;
+
+                }
+            }
+
+            figcaption {
+                .recipeWidBtn {
+                    display: flex;
+
+                    div {
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 50px;
+                        width: 70px;
+                        text-align: center;
+                    }
+                }
+
+                .flex {
+                    h2 {
+                        margin: 0;
+                        font-size: 24px;
+                    }
+
+
+                }
+
+                p {
+                    font-size: 16px;
+                    margin: 20px 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    word-break: break-word;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical
+                }
+            }
+        }
+
+    }
+}
+
+
+//프로필-mobile
+@include mobile {
+    .profile figure img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile figure figcaption p:nth-of-type(1) {
+        font-size: 1.2rem;
+    }
+
+    .profile figure figcaption p:nth-of-type(2) {
+        font-size: 0.9rem;
+    }
+
+    .my_btn {
+        gap: 3%;
+        margin-top: 10%;
+        .Reg_btn{
+            display:inline-block;
+            width:80px;
+        }
+        button {
+            width: 65px;
+            height: 70px;
+            font-size: 11px;
+
+
+            img {
+                width: 30px;
+            }
+        }
+        
+    }
+    .noMyrecipe {
+        font-size: 0.95rem;
+    }
+
+    .myRecipeWid_box {
+        height: auto;
+
+        .myRecipeWid {
+            height: auto;
+            div{
+                div{
+                    figure{
+                        figcaption{
+                            .flex{
+                                h2{
+                                    font-size: 1.0rem;
+                                }
+                            }
+                            p{
+                                margin:10px 0;
+                            }
+                            .recipeWidBtn{
+                                div{
+                                    display:flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width:50px;
+                                    font-size: 0.8rem;
+                                }
+                            
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .myRecipeWid_box .myRecipeWid figure .scrap_position .menu_img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .myRecipeWid_box .myRecipeWid figure figcaption h2 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .myRecipeWid_box .myRecipeWid figure figcaption p {
+        font-size: 0.8rem;
+        // margin: 10px 0;
+    }
+
+
+    .scrap button img {
+        width: 23px;
+        height: auto;
+    }
+
+    .noComment {
+        font-size: 0.95rem;
+    }
+    .recipeCommentWid_box {
+        height: auto;
+
+        .recipeCommentWid {
+            height: auto;
+            div{
+                div{
+                    figure{
+                        figcaption{
+                            .flex{
+                                h2{
+                                    font-size: 1.0rem;
+                                }
+                            }
+                            p{
+                                margin:10px 0;
+                            }
+                            .recipeWidBtn{
+                                div{
+                                    display:flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width:50px;
+                                    font-size: 0.8rem;
+                                }
+                            
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .recipeCommentWid_box .recipeCommentWid figure .scrap_position .menu_img {
+            width: 110px;
+            height: 110px;
+        }
+    
+        .recipeCommentWid_box .recipeCommentWid figure figcaption h2 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    
+        .recipeCommentWid_box .recipeCommentWid figure figcaption p {
+            font-size: 0.8rem;
+            // margin: 10px 0;
+        }
+    
+    
+        .scrap button img {
+            width: 23px;
+            height: auto;
+        }
+    }
+
+    .noLike {
+        font-size: 0.95rem;
+    }
+
+    .likeRecipeWid_box {
+        height: auto;
+
+        .likeRecipeWid {
+            height: auto;
+
+            div {
+                div {
+                    figure {
+                        figcaption {
+                            .flex {
+                                h2 {
+                                    font-size: 1.0rem;
+                                }
+                            }
+
+                            p {
+                                margin: 10px 0;
+                            }
+
+                            .recipeWidBtn {
+                                div {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 50px;
+                                    font-size: 0.8rem;
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .likeRecipeWid_box .likeRecipeWid figure .scrap_position .menu_img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .likeRecipeWid_box .likeRecipeWid figure figcaption h2 {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .likeRecipeWid_box .likeRecipeWid figure figcaption p {
+        font-size: 0.8rem;
+        // margin: 10px 0;
+    }
+
+
+    .scrap button img {
+        width: 23px;
+        height: auto;
+    }
+}
+@include pad {
+    .my_btn{
+        button{
+            img{
+                width:7vw;
+            }
+            width:17vw;
+            height:17vw;
+            font-size: 2vw;
+        }
+        
+    }
+    }
+
+
+    
+
+    

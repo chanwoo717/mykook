@@ -1,0 +1,52 @@
+@import "../style/mixin.scss";
+body {
+
+    .loading {
+        position: fixed;
+        top: 40%;
+        left: 45%;
+
+        img {
+            width: 50%;
+        }
+
+        p {
+            color: #FFC700;
+            font-size: 1.2rem;
+        }
+    }
+
+
+
+    background-image: url("/images/bg.png");
+    background-attachment: fixed;
+    background-position: center top;
+    
+    main {
+        min-height: 100vh;
+        overflow: hidden;
+        padding: 0 70px;
+        width: 768px;
+        height:auto;
+        margin: 0 auto;
+        position: relative;
+        background-color: #FFFEF9;
+    }
+}
+
+
+@include mobile {
+    .loading {
+        left: 37%;
+    }
+    body main {
+        width: 100%;
+        padding: 0 10%;
+    }
+}
+@include pad {
+    body main {
+        width: 100%;
+        padding: 0 10%;
+    }
+}

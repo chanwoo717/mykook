@@ -1,0 +1,292 @@
+@import "../style/color.scss";
+@import "../style/mixin.scss";
+
+.reg {
+    padding: 100px 0;
+    width: 100%;
+    font-size: 1.2rem;
+    color: $color-black;
+
+
+    form {
+        article {
+            margin: 50px 0;
+
+            h3 {
+                background-color: #F5F5F5;
+                height: 35px;
+                line-height: 35px;
+                font-weight: 600;
+                margin: 20px 0;
+                padding-left: 10px;
+            }
+
+            input {
+                border: 1px solid $color-lightgray;
+                border-radius: 5px;
+                padding-left: 10px;
+                height: 30px;
+                width: 100%;
+
+            }
+
+            textarea {
+                width: 100%;
+                height: 50px;
+                border: 1px solid $color-lightgray;
+                border-radius: 5px;
+            }
+        }
+
+
+        .m_img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: $color-lightgray;
+            margin: 0 auto;
+
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        .ketegori {
+            li {
+                margin: 10px 0;
+
+                label {
+                    font-size: 0.95rem;
+                }
+
+                select {
+                    border: 1px solid $color-lightgray;
+                    border-radius: 5px;
+                    width: 80px;
+                    height: 25px;
+                    margin: 0 10px;
+                }
+            }
+        }
+
+
+
+        .cooking {
+            display: flex;
+            margin: 10px 0;
+
+            input[type=text] {
+                width: 80%;
+                height: 100px;
+                margin: 0 10px;
+            }
+
+            input::placeholder {
+                white-space: pre-wrap;
+            }
+
+            .cooking_img {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                background-color: $color-lightgray;
+                border-radius: 5px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+
+            }
+
+
+        }
+
+        .complete_img {
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                width: 100px;
+                height: 100px;
+                background-color: $color-lightgray;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .add_btn {
+            text-align: center;
+
+            button {
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+                font-weight: 600;
+            }
+        }
+
+        .open_btn {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+
+            select {
+                border: 1px solid $color-lightgray;
+                border-radius: 5px;
+                width: 80px;
+                height: 40px;
+            }
+
+            input {
+                height: 40px;
+                width: 30%;
+                border: none;
+                background-color: $color-yellow;
+                color: $color-black;
+                font-weight: 600;
+
+                &:hover {
+                    color: $color-white;
+                }
+            }
+
+        }
+
+    }
+
+    .btn-upload {
+        font-size: 0.8rem;
+        width: 60px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        border: 1px solid $color-black;
+        border-radius: 3px;
+        background-color: #f0f0f0;
+        font-size: 0.75rem;
+        cursor: pointer;
+
+        &:hover {
+            // background: rgb(77, 77, 77);
+            background: $color-gray;
+            border: none;
+            color: #fff;
+        }
+    }
+
+    #file0 {
+        display: none;
+    }
+    #file1 {
+        display: none;
+    }
+    #file2 {
+        display: none;
+    }
+    #file3 {
+        display: none;
+    }
+    #file4 {
+        display: none;
+    }
+    #file5 {
+        display: none;
+    }
+
+
+    .delete_pop,
+    .delete_pop2 {
+        width: 50%;
+        border: none;
+        background-color: #FCEEA7;
+        border-radius: 20px;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+
+        button {
+            width: 20%;
+            height: 25px;
+            margin: 0 8px;
+            border: none;
+            border-radius: 5px;
+            background-color: $color-yellow;
+            color: $color-black;
+            font-weight: 600;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+@include mobile {
+    body main {
+        padding: 0 10%;
+        width: 100%;
+
+        .reg form {
+            article h3 {
+                font-size: 80%;
+            }
+
+            .m_img {
+                width: 100%;
+            }
+
+            .cooking input[type=text] {
+                width: 60%;
+            }
+
+            .complete_img li {
+                width: 80px;
+                height: 80px;
+            }
+
+            .open_btn input {
+                width: 25%;
+
+            }
+        }
+
+        .reg {
+            padding: 60px 0;
+            .delete_pop,
+            .delete_pop2 {
+                width: 70%;
+
+                p {
+                    font-size: 80%;
+                }
+
+                button {
+                    width: 30%;
+                    font-size: 70%;
+                }
+            }
+        }
+    }
+}

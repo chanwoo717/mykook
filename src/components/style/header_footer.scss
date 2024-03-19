@@ -1,0 +1,121 @@
+@import "reset.css";
+@import "../style/color.scss";
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import "../style/mixin.scss";
+
+
+
+body {
+    font-family: sans-serif;
+
+
+    a {
+        text-decoration: none;
+        color: $color-black;
+    }
+
+    .head {
+        width: 768px;
+        height: 60px;
+        position: fixed;
+        font-size: 35px;
+        text-align: center;
+        background-color: $color-white;
+        border: 1px solid white;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 1;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+
+        h1 {
+            a {
+                color: $color-yellow;
+            }
+        }
+
+        .bugger_menu {
+            width: 40px;
+            height: 40px;
+
+            position: absolute;
+            top: 25%;
+            right: 5%;
+
+            p {
+                width: 100%;
+                position: absolute;
+                font-size: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $color-yellow
+            }
+
+            p:hover {
+                cursor: pointer;
+            }
+
+            p:nth-of-type(1) {
+                transform: translateY(-6px);
+                pointer-events: none;
+            }
+
+            p:nth-of-type(3) {
+                transform: translateY(6px);
+                pointer-events: none;
+            }
+        }
+    }
+
+    .foot {
+        width: 768px;
+        height: 70px;
+        position: fixed;
+        bottom: 0px;
+        background-color: $color-white;
+        border: 1px solid white;
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+
+        img {
+            width: 40px;
+            height: auto;
+        }
+    }
+
+
+}
+
+@include mobile {
+    body .head {
+        width: 100%;
+    }
+
+    body .foot {
+        width: 100%;
+
+        img {
+            width: 30px;
+        }
+    }
+}
+
+@include pad {
+    body{
+        .head{
+            width:100%;
+        }
+        .foot{
+            width:100%;
+        }
+    }
+}

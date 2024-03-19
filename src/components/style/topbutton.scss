@@ -1,0 +1,27 @@
+body {
+    main {
+        
+            position: relative;
+
+            .scrollToTopButton {
+                cursor: pointer;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                width: 15px;
+                height: 15px;
+                position: fixed;
+                bottom: 120px;
+                right: calc(50%);
+
+                img {
+                    width: 50px;
+                }
+            }
+
+            .scrollToTopButton.visible {
+                opacity: 1;
+                z-index: 1;
+            }
+        
+    }
+}

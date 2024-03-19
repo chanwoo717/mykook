@@ -1,0 +1,14 @@
+$mobile: 480px;
+$pad: 768px;
+
+@mixin mobile {
+    @media(max-width:$mobile) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(min-width:$mobile) and (max-width:$pad) {
+        @content;
+    }
+}
