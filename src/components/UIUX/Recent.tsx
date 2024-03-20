@@ -34,6 +34,7 @@ function Recent({ setValue, handleSearch2 }: any) {
     }
 
     const clearKeyword = () => {
+        localStorage.removeItem('keywords');
         setKeywords([])
     }
 

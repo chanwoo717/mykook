@@ -1,3 +1,4 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -6,13 +7,13 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD2TxWSQYodVEALxrXmDx1kjLw3c7wpCfE",
-  authDomain: "kookkook-99003.firebaseapp.com",
-  projectId: "kookkook-99003",
-  storageBucket: "kookkook-99003.appspot.com",
-  messagingSenderId: "587179969152",
-  appId: "1:587179969152:web:88871816dc9ba43661b465",
-  measurementId: "G-HY019R423S"
+  apiKey: "AIzaSyCWZe88qLicLNGbOYSjZ8DvYT8oXkEqnUY",
+  authDomain: "kookkook-52378.firebaseapp.com",
+  projectId: "kookkook-52378",
+  storageBucket: "kookkook-52378.appspot.com",
+  messagingSenderId: "168982881198",
+  appId: "1:168982881198:web:0526f180d8fc8374e39e3f",
+  measurementId: "G-ES3N7NFTLJ"
 };
 
 // Initialize Firebase
