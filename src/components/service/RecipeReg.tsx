@@ -36,6 +36,7 @@ function RecipeReg({}:any) {
     const firebase = {
 
         upload: async (file: any, idx: any, id2: any) => {
+            console.log('asdsadsa =', file, idx, id2  )
             if (idx < 10) {
                 idx = '0' + idx;
             }
@@ -125,6 +126,9 @@ function RecipeReg({}:any) {
                 }
 
             })
+
+            
+
 
 
 

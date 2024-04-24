@@ -46,7 +46,7 @@ function MyrecipeReg({ myRecipe,session,dataCrl }: any) {
                     const start = url.lastIndexOf('%2F') + 3; //url 뒤 부터 %2f부분의 인덱스값 
                     const end = url.lastIndexOf('?');
                     const str = url.substring(start, end);
-                    deleteObject(ref(storage, `/${session.user.email}/${id}/${str}`))
+                    deleteObject(ref(storage, `/${session.user.id}/${id}/${str}`))
                 }
             })
             // const url = 'https://firebasestorage.googleapis.com/v0/b/kookkook-99003.appspot.com/o/jsg8733%40gmail.com%2F1709775110201%2Ftest_img1.jpg?alt=media&token=101ccc9a-e67b-45fc-b4ea-a8993bc22527'

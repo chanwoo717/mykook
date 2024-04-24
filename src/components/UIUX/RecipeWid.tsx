@@ -45,13 +45,13 @@ function RecipeWid({ dataID,selectName,data4 }: any) {
                         <div key={k}>
                             <div>
                                 <figure>
-                                    <div className='scrap_position'><img className='menu_img' src={obj.m_thumb} /><FuncScrap obj ={obj} /></div>   
+                                    <div className='scrap_position' ><img className='menu_img' src={obj.m_thumb} onClick={() => { link(obj.name) }} /><FuncScrap obj ={obj} /></div>   
                                     <figcaption>
                                         <div className='flex'>
                                             <h2 onClick={() => { link(obj.name) }}>{obj.name}</h2>
                                         </div>
                                         
-                                        <p>{obj.tip}</p>
+                                        <p onClick={() => { link(obj.name) }}>{obj.tip}</p>
                                         <div className="recipeWidBtn">
                                             <div className="commentBox" onClick={() => { link(obj.name) }}><FuncComment obj={obj} data4={data4}/></div>
                                             <FuncLike obj={obj} />

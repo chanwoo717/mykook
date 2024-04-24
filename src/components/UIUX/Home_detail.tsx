@@ -36,7 +36,7 @@ function Home_detail({ dataID, detailUrl, dataCrl4, data4, session }: any) {
         let [youtubeID,setYoutubeID] = useState();
         useEffect(() => {
         axios.get(
-            `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${detailData[0].name} 레시피&type=video&key=AIzaSyDZvlRumaderGDF9TIAR4qsgswiV1FLFTw`
+            `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${detailData[0].name} 레시피&type=video&key=AIzaSyD8Kj9MiGCaOF-6YkWkkLZmBhXxGGZSK2g`
         )
         .then((res) => {
             setYoutubeID(res.data.items[0].id.videoId);

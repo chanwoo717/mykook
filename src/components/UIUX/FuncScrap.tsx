@@ -15,6 +15,11 @@ function FuncScrap({ obj }: any) {
 
     const bookmarkClick = (aa: any) => {
 
+        if(status === 'unauthenticated') {
+            alert('로그인이 필요한 서비스입니다.')
+            return
+        };
+
         let Dateid = Date.now()
         let bookmarkOne = obj;
         let aaa = data2.filter((obj:any)=> aa.seq==obj.seq)

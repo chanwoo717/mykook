@@ -2,8 +2,7 @@ import axios from "axios";
 import { create } from "zustand";
 
 const request1 = axios.create({
-    baseURL:  process.env.VERCEL_URL,
-    timeout: 3500
+    baseURL:  process.env.VERCEL_URL
 })
 interface Ty2 {
     data2: any[];
@@ -24,8 +23,6 @@ export const useStore2 = create<Ty2>((set) => {
                     break;
             }
             set({ data2: res2.data, status1: true });
-
-
         }
     }
 })

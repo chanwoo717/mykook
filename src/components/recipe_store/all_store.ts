@@ -2,8 +2,7 @@ import axios from "axios";
 import { create } from "zustand";
 
 const request = axios.create({
-    baseURL: process.env.VERCEL_URL,
-    timeout: 4000   
+    baseURL: "/"
 })
 
 interface Ty {
@@ -24,29 +23,29 @@ export const useStore = create<Ty>((set) => {
         cateIdx:0,
         dataCrl: async function (type, id, overData) {
             let res: any;
-            switch (type) {
-                case 'all': res = await request.get('/api/all_recipe/')
-                    break;
+            // switch (type) {
+            //     case 'all': res = await request.get('/api/all_recipe/')
+            //         break;
 
-                case '카테고리': res = await request.get(`/api/all_recipe/${id}`)
-                    break;
+            //     case '카테고리': res = await request.get(`/api/all_recipe/${id}`)
+            //         break;
 
-                case '검색': res = await request.get(`/api/all_recipe/${id}`)
-                    break;
+            //     case '검색': res = await request.get(`/api/all_recipe/${id}`)
+            //         break;
 
-                case '나의레시피': res = await request.get(`/api/all_recipe/${id}`)
-                    break;
+            //     case '나의레시피': res = await request.get(`/api/all_recipe/${id}`)
+            //         break;
 
-                case 'insert': res = await request.post('/api/all_recipe/', overData)
-                    break;
+            //     case 'insert': res = await request.post('/api/all_recipe/', overData)
+            //         break;
 
-                case 'delete': res = await request.delete(`/api/all_recipe/${id}`)
-                    break;
+            //     case 'delete': res = await request.delete(`/api/all_recipe/${id}`)
+            //         break;
 
-                case 'put': res = await axios.put(`/api/all_recipe/${id}`, overData)
-                    break;
-            }
-            set({ data: res.data });
+            //     case 'put': res = await axios.put(`/api/all_recipe/${id}`, overData)
+            //         break;
+            // }
+            // set({ data: res.data });
 
 
         },

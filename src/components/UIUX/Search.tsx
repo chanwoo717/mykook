@@ -6,6 +6,7 @@ import { useState, useEffect, ChangeEvent } from "react";
 import { useStore } from '../recipe_store/all_store';
 import { useStore3 } from '../recipe_store/result_data';
 import Recent from './Recent';
+import recipe from "@/lib/recipe.json";
 
 interface iDefault {
     defaultValue: string | null
@@ -16,7 +17,7 @@ const Search = ({ defaultValue }: iDefault) => {
 
     const [inputValue, setValue] = useState(defaultValue);
     const router = useRouter();
-    let { data, dataCrl } = useStore();
+    let data = recipe;
     let { data3, resultData } = useStore3();
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -76,11 +77,6 @@ const Search = ({ defaultValue }: iDefault) => {
     const handleKeyPress = (event: { key: any; }) => {
         if (event.key === "Enter") return handleSearch
     }
-
-
-    useEffect(() => {
-        dataCrl('all', '', '');
-    }, [])
 
 
     return (

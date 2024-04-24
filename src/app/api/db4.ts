@@ -7,7 +7,7 @@ export const test4 = async (type?: string, body?: initTy4) => {
     await client.connect();
     
     let db, collection, data4
-    db = client.db('kook')
+    db = client.db('Kookproject')
     collection = db.collection('like')
 
     

@@ -28,7 +28,7 @@
                     width: 180px;
                     height: 180px;
                     border-radius: 20px;
-
+                    cursor: pointer;
                 }
                 .scrap{
                     button{
@@ -40,6 +40,7 @@
             }
 
             figcaption {
+                cursor: pointer;
                 .recipeWidBtn{
                     display:flex;
                     .commentBox{
